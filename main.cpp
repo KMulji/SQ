@@ -18,6 +18,12 @@ int main(){
     y->Enqueue(10.3);
     y->Enqueue(10.2);
 
+    Queue<double> *z = new Queue<double>();
+    z->Enqueue(10.1);
+    z->Enqueue(10.5);
+    z->Enqueue(10.3);
+    z->Enqueue(10.2);
+
 
 
     std::cout<<"Check mem"<<std::endl;
