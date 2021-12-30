@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Queue.h"
-
+#include "Stack.h"
 int main(){
     
    Queue<int> *x = new Queue<int>();
@@ -10,23 +10,20 @@ int main(){
     x->Enqueue(40);
 
     x->Dequeue();
+    x->Dequeue();
+    x->Dequeue();
+    x->Dequeue();
+    x->Dequeue();
 
-
-    Queue<double> *y = new Queue<double>();
-    y->Enqueue(10.1);
-    y->Enqueue(10.5);
-    y->Enqueue(10.3);
-    y->Enqueue(10.2);
-
-    Queue<double> *z = new Queue<double>();
-    z->Enqueue(10.1);
-    z->Enqueue(10.5);
-    z->Enqueue(10.3);
-    z->Enqueue(10.2);
-
-
-
-    std::cout<<"Check mem"<<std::endl;
-
+    Stack<int> *z = new Stack<int>();
+    z->Push(10);
+    z->Push(20);
+    z->Push(30);
+    z->Push(40);
+    z->Pop();
+    z->Pop();
+    z->Pop();
+    z->Pop();
+    z->Pop();
     return 0;
 }

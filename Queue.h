@@ -9,7 +9,7 @@ class Queue{
     public:
         Queue(); 
         void Enqueue(T x);
-        int Dequeue();
+        T Dequeue();
 };
 
 #endif

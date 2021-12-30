@@ -16,21 +16,27 @@ void Queue<T>::Enqueue(T x){
         this->head=temp;
         this->tail=temp;
         return;
-    }
+    } 
     this->tail->setNext(temp);
     this->tail = temp;
 }
 
 template <typename T>
-int Queue<T>::Dequeue(){
-    int value = this->head->getValue();
+T Queue<T>::Dequeue(){
 
+    if(this->head==nullptr){
+        std::cout<<"Cant Dequeue from empty queue"<<std::endl;
+        return -1;
+    }
+    T value = this->head->getValue();
+    
     if(this->head->getNext()==nullptr){
         free(this->tail);
         this->tail=nullptr;
         this->head=nullptr;
         return value;
     }
+    
     Node<T>* temp = this->head;
     this->head=this->head->getNext();
 
