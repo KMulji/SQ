@@ -1,3 +1,0 @@
-headers: {
-      'If-None-Match': ''
-    }
